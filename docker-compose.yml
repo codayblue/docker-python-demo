@@ -1,0 +1,12 @@
+version: "3"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/dev/Dockerfile
+    volumes:
+      - ./src:/usr/src/app
+    ports:
+      - 4000:4000
+  redis:
+    image: redis
